@@ -1,0 +1,9 @@
+# SELECT
+
+          SELECT categoria,
+	          SUM(venda) AS "soma"
+          FROM public.vendas_solution 
+          WHERE  data_venda BETWEEN '2017-01-01' AND '2017-12-31'
+          GROUP BY categoria
+          ORDER BY soma DESC
+          LIMIT 1
